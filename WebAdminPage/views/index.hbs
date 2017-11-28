@@ -1,0 +1,87 @@
+<h1>Software Engineering Project---Easy Book</h1>
+<div>
+</div>
+<h2>Admin Use</h2>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="Bookname">Book Name</label>
+            <input type="text" id="Bookname" name="Bookname">
+        </div>
+        <div class="input">
+            <label for="PublishYear">Publish Year</label>
+            <input type="text" id="PublishYear" name="PublishYear">
+        </div>
+        <div class="input">
+            <label for="ISBN">ISBN</label>
+            <input type="text" id="ISBN" name="ISBN">
+        </div>
+        <div class="input">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <div class="input">
+            <label for="version">Version</label>
+            <input type="text" id="version" name="version">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Get Data</h3>
+    <a href="/get-data">LOAD DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Bookname: {{ this.Bookname }}</div>
+                <div>ISBN: {{ this.ISBN }}</div>
+                <div>Author: {{ this.author }}</div>
+                <div>version: {{ this.version }}</div>
+                <div>PublishYear: {{ this.PublishYear }}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+<section class="update">
+    <h3>Update Data</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="Bookname">Book Name</label>
+            <input type="text" id="Bookname" name="Bookname">
+        </div>
+        <div class="input">
+            <label for="ISBN">ISBN</label>
+            <input type="text" id="ISBN" name="ISBN">
+        </div>
+        <div class="input">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <div class="input">
+            <label for="version">Version</label>
+            <input type="text" id="version" name="version">
+        </div>
+        <div class="input">
+            <label for="PublishYear">Publish Year</label>
+            <input type="text" id="PublishYear" name="PublishYear">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>
+</section>
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>
